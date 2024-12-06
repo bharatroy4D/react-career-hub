@@ -13,11 +13,13 @@ import Jobs from './Components/Jobs/Jobs.jsx';
 import AppliedJobs from './Components/AppliedJobs/AppliedJobs.jsx';
 import Statistic from './Components/Statistic/Statistic.jsx';
 import Blogs from './Components/Blogs/Blogs.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:<Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
@@ -35,10 +37,10 @@ const router = createBrowserRouter([
         path:'/statistic',
         element:<Statistic></Statistic>
       },
-      {
-        path:'/blogs',
-        element:<Blogs></Blogs>
-      }
+      // {
+      //   path:'/blogs',
+      //   element:<Blogs></Blogs>
+      // }
 
     ]
   },
